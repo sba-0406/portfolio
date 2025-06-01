@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple: #6a0dad;
+      --lavender: #e6e6fa;
+      --silver: #c0c0c0;
+      --grey: #a9a9a9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--silver), var(--lavender), var(--purple));
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      animation: bgShift 15s ease infinite;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--purple);
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1200px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background-color: var(--grey);
+      padding: 20px;
+      border-radius: 15px;
+      width: 280px;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .add-form {
+      margin-top: 30px;
+      background-color: rgba(255,255,255,0.8);
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    .add-form input, .add-form textarea, .add-form button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1em;
+    }
+
+    .add-form button {
+      background-color: var(--purple);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-form button:hover {
+      background-color: #4b0082;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Portfolio</h1>
+
+  <div class="project-container" id="project-container">
+    <!-- Projects will appear here -->
+  </div>
+
+  <div class="add-form">
+    <h3 style="color: var(--purple);">Add a Project</h3>
+    <input type="text" id="project-title" placeholder="Project Title" />
+    <textarea id="project-desc" rows="4" placeholder="Project Description"></textarea>
+    <button onclick="addProject()">Add Project</button>
+  </div>
+
+  <script>
+    function addProject() {
+      const title = document.getElementById("project-title").value.trim();
+      const desc = document.getElementById("project-desc").value.trim();
+      if (!title || !desc) return;
+
+      const card = document.createElement("div");
+      card.className = "project-card";
+      card.innerHTML = `<h3>${title}</h3><p>${desc}</p>`;
+      document.getElementById("project-container").appendChild(card);
+
+      document.getElementById("project-title").value = "";
+      document.getElementById("project-desc").value = "";
+    }
+  </script>
+</body>
+</html>

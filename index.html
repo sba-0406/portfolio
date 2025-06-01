@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bisma Alisha | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+
+
+  
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Shaik Bisma Alisha</div>
+  <nav>
+    <ul>
+      <li class="active" data-link="#about">About Me</li>
+      <li data-link="#skills">Skills</li>
+      <li data-link="#projects">Projects</li>
+      <li data-link="#contact">Contact</li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div>
+      <img src="./images/4041a86a-061b-423f-9632-823006b15de8.jpg" alt="Profile Picture" />
+    </div>
+    <div class="about-text">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        <b>Hello! I'm Shaik Bisma Alisha, a passionate and curious learner with a strong interest in software development. I have working knowledge of Java, basic C and Python, and foundational skills in frontend (HTML, CSS, JavaScript) as well as backend (Node.js, Express, PostgreSQL) development.
+</b>
+        
+      <p>
+        I'm a problem solver at heart and enjoy breaking down challenges into manageable parts. I may still be building my experience, but I'm a quick learner, critical thinker, and always open to learning new technologies and improving my skills.
+      </p>
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="section-title">Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-name">Java</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">PostgreSQL</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">Node.js</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">CSS & HTML</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-name">basic C and Python</div>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card">
+        <img class="project-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Project 1" />
+        <div class="project-content">
+          <div class="project-title">Portfolio Website</div>
+          <div class="project-desc">
+            a responsive portfolio site with a contact form that captures and stores user input in a PostgreSQL database using Node.js and Express. Demonstrates backend integration, data handling, and database connectivity
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/janedoe/portfolio" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="http://127.0.0.1:3006/index.html" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="project-img" src="./images/01142022_Blog_GD-Calculator_Header-04.jpg" alt="Project 2" />
+        <div class="project-content">
+          <div class="project-title">Calculator App</div>
+          <div class="project-desc">
+            Developed a simple calculator app using HTML, CSS, and JavaScript to perform basic arithmetic operations. Focused on clean UI design and interactive functionality for real-time calculations.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sba-0406/Calculator" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="http://127.0.0.1:3000/index.html" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img class="project-img" src="./images/download.png" alt="Project 3" />
+        <div class="project-content">
+          <div class="project-title">Caesar Cipher</div>
+          <div class="project-desc">
+            Built a web-based Caesar Cipher tool to encrypt and decrypt messages with customizable shift values.
+Showcases core concepts in classical cryptography and frontend interactivity using HTML, CSS, and JavaScript.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sba-0406/caesar-cipher" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="http://127.0.0.1:3002/index.html" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <!-- <form id="contactForm" action="/submit-form" method="POST" enctype="text/plain" onsubmit="return validateForm()"> -->
+    <form id="contactForm" action="/contact" method="POST" onsubmit="return validateForm()">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    
+
+    <div class="social-links" style="margin-top: 40px;">
+      <a href="https://www.linkedin.com/in/bisma-alisha-shaik-1b136b294/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/sba-0406" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <!-- <a href="https://twitter.com/janedoe" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a> -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Jane Doe. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
