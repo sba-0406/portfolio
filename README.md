@@ -32,7 +32,7 @@ Make sure you have the following installed:
    ```bash
    git clone <your-repo-url>  # if you push to GitHub
    cd portfolio
-````
+
 
 2. **Install dependencies:**
 
